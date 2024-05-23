@@ -48,3 +48,18 @@ point_file: point file obtained from the activation extraction step
 output_path: path to where we want to save the obtained cluster file
 clusters: Number of clusters to cluster the representations into 
 ```
+
+# Aligning Clusters
+
+To calculate cluster alignment between two cluster files, run the `get_alignment.sh` script. You need to specify the following
+
+```
+top_n_translations: top N translations to consider
+matching_threshold: The matching threshold
+size_threshold: The size threshold
+types: The number of types to consider
+cluster_file_path1: Path to first cluster file
+cluster_file_path2: Path to the second cluster file
+dictionary_file_path: path to dictionary mapping words from the language of the first cluster file to the language of the second cluster
+file
+```
