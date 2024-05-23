@@ -15,6 +15,7 @@ inputPath=""       # path to the directory where sentence files are saved
 encoder_input=""       # Encoder Sentences
 decoder_input=""      # Decoder Sentences
 model=""     # Model that we want to do the extraction for
+model_class=""
 NEUROX_PATH=""
 
 sentence_length=300   # maximum sentence length
@@ -43,7 +44,7 @@ python ${scriptDir}/frequency_count.py --input-file ${decoder_working_file} --ou
 
 
 # Extract layer-wise activations
-PYTHONPATH=$NEUROX_PATH python -u -m neurox.data.extraction.transformers_extractor "${model},${model},MT5ForConditionalGeneration" ${encoder_working_file}  ${decoder_working_file} activations.json --output_type json --seq2seq_component both --decompose_layers --filter_layers "$layers_of_interest"
+PYTHONPATH=$NEUROX_PATH python -u -m neurox.data.extraction.transformers_extractor "${model},${model},${model_class}" ${encoder_working_file}  ${decoder_working_file} activations.json --output_type json --seq2seq_component both --decompose_layers --filter_layers "$layers_of_interest"
 
 # Create a dataset file with word and sentence indexes
 layers_of_interest="0 1 3 6 9 12"
