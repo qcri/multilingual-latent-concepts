@@ -1,0 +1,25 @@
+# Python caches
+*__pycache__
+*.ipynb_checkpoints
+*.vscode
+.coverage*
+*egg-info
+.pytest_cache
+
+# Temp files
+tmp
+*.swp
+
+# macOS junk
+*DS_Store
+
+# Build files
+docs-generator
+build
+dist
+
+# Python envs
+.envs
+venv
+.venv
+docs/*.rst
