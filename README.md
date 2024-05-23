@@ -63,3 +63,14 @@ cluster_file_path2: Path to the second cluster file
 dictionary_file_path: path to dictionary mapping words from the language of the first cluster file to the language of the second cluster
 file
 ```
+# Getting Overlapping Clusters 
+
+To get overlapping clusters in one cluster file, run the `get_overlap.sh` script. You need to specify the following 
+
+
+```
+clusters_path: Path to where the clusters are saved
+output_path: Path to where we want to save the overlapping clusters
+clusters_threshold: Threshold to consider that the concept is overlapping between two languages
+sentences_threshold: Threshold at which the sentences are split into two different languages
+```
