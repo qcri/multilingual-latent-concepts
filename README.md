@@ -20,7 +20,7 @@ To extract the activations, we are going to rely on a modified version of the [N
 
 # Running Activation Extraction For Concept Alignment Experiment
 
-To extract the activations for the concept alignment experiment, run the activation_extraction_with_filtering.sh script. From within the script you need to specify some variables. Here's a summary of what needs to be modified
+To extract the activations for the concept alignment experiment, run the `activation_extraction_with_filtering.sh` script. From within the script you need to specify some variables. Here's a summary of what needs to be modified
 
 ```
 scriptDir: Path to the cloned ConceptX repository
@@ -36,6 +36,6 @@ mapping: FastAlign mapping used for filtering
 
 # Running Activation Extraction For Concept Ovelap Experiment
 
-To extract the activations for the concept overlap experiment, run the activation_extraction_without_filtering.sh script. From within the script you need to specify some variables from within the code. These varaibles are almost the same as the ones that you specified for the concept alignment experiment. 
+To extract the activations for the concept overlap experiment, run the `activation_extraction_without_filtering.sh` script. From within the script you need to specify some variables from within the code. These varaibles are almost the same as the ones that you specified for the concept alignment experiment. 
 
 
