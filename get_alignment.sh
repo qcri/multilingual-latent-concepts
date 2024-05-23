@@ -1,8 +1,5 @@
 #!/bin/bash -l
 
-
-#SBATCH -p cpu-all
-
 top_n_translations="" 
 matching_threshold=""
 size_threshold=""

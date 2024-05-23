@@ -1,12 +1,5 @@
 #!/bin/bash -l
 
-
-#SBATCH -p cpu-all
-
-
-
-
-
 clusters_path=""
 output_path=""
 clusters_threshold=""

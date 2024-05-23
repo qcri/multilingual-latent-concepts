@@ -1,12 +1,5 @@
 #!/bin/bash -l
 
-#SBATCH -J sample
-#SBATCH -o outputfile 
-#SBATCH -p gpu-all
-#SBATCH --gres=gpu:1
-#SBATCH --mem=500GB    # amount of memory
-
-module load cuda11.8/toolkit/11.8.0 cudnn8.9-cuda11.8/8.9.1.23
 conda activate neurox_pip
 
 scriptDir=""   # path to ConceptX script directory
