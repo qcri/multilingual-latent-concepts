@@ -19,10 +19,10 @@ sentence_length=300
 minfreq=0 
 maxfreq=15
 delfreq=10000000 
-layer=0 
+layer=0
 # define the path/or huggingface identifier of the model
 model=""
-
+model_class=""
 # Define the path of the NeuroX modified directory 
 NEUROX_PATH=""
 
@@ -39,7 +39,7 @@ cp ${inputPath}/$decoder_input $decoder_input.tok
 # Do sentence length filtering and keep sentences max length of {sentence_length}
 python "code/parallel_sentence_length.py" --encoder_input $encoder_input.tok --decoder_input $decoder_input.tok --encoder_output_file $encoder_working_file --decoder_output_file  $decoder_working_file --length ${sentence_length}
 
-PYTHONPATH=$NEUROX_PATH python -u -m neurox.data.extraction.transformers_extractor "${model},${model},MT5ForConditionalGeneration" ${encoder_working_file}  ${decoder_working_file} activations.json --output_type json --seq2seq_component both --decompose_layers --filter_layers ${layer}
+PYTHONPATH=$NEUROX_PATH python -u -m neurox.data.extraction.transformers_extractor "${model},${model},${model_class}" ${encoder_working_file}  ${decoder_working_file} activations.json --output_type json --seq2seq_component both --decompose_layers --filter_layers ${layer}
 
 # Create a dataset file with word and sentence indexes
 python ${scriptDir}/create_data_single_layer.py --text-file ${encoder_working_file} --activation-file encoder-activations-layer${layer}.json --output-prefix ${encoder_working_file} 
