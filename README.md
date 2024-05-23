@@ -38,4 +38,13 @@ mapping: FastAlign mapping used for filtering
 
 To extract the activations for the concept overlap experiment, run the `activation_extraction_without_filtering.sh` script. From within the script you need to specify some variables from within the code. These varaibles are almost the same as the ones that you specified for the concept alignment experiment. 
 
+# Clustering Representations 
 
+To cluster the representations obtained from the extraction step, run the `clustering.sh` script. You need to pass the following variables
+
+```
+vocab_file: vocab file obtained from the activation extraction step
+point_file: point file obtained from the activation extraction step
+output_path: path to where we want to save the obtained cluster file
+clusters: Number of clusters to cluster the representations into 
+```
